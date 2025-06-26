@@ -1,0 +1,41 @@
+/* Ici on modifie le header (la nav barre avec les liens, le logo et le bouton */
+#container-header {
+    display: flex;
+}
+
+#container-logo-adrar {
+    height: 100%;
+    width: 20%;
+}
+
+#container-header-link {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#container-header-link ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#container-header-link ul li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#container-bouton-contact {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+/* ---------------------------------------------------- */
