@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="html.css">
+    <title>HTML</title>
+</head>
+<body>
+    <header id="container-header">
+
+        <!-- Container avec juste le logo -->
+        <div id="container-logo-adrar">
+            <img src="image/logo-adrar.svg" alt="Logo Adrar" id="logo-adrar-img" height="80" width="60">
+        </div>
+        <!---------------------------------->
+
+        <!-- Container pour la nav entre les pages -->
+        <div id="container-header-link">
+            <ul>
+                <li><a href="Accueil.html">Accueil</a></li>
+                <li><a href="Html.html">HTML</a></li>
+                <li><a href="Css.html">CSS</a</li>
+                <li><a href="Javascript.html">JavaScript</a></li>
+                <li><a href="Api.html">API</a></li>
+            </ul>
+        </div>
+        <!---------------------------------->
+        <!-- Container contenant le bouton contactez-nous -->
+        <div id="container-bouton-contact">
+            <a id="bouton-contact" href="Contact.html">Contactez-nous</a>
+        </div>
+        <!---------------------------------->
+    </header>
+    <main>
+        <!-- On crée le carrousel (container global) -->
+        <div class="carousel">
+
+            <!-- on crée des boutons radio -->
+            <input type="radio" name="carousel" id="slide1" checked>
+            <input type="radio" name="carousel" id="slide2">
+            <input type="radio" name="carousel" id="slide3">
+
+            <!-- Ici les différentes slides -->
+            <div class="slides">
+                <div class="slide" id="slide-1">
+                    <h2>Qu'est ce que L'hypertext markup language ?</h2>
+                    <p>L'hypertext markup language (HTML), est un langage de balisage conçu pour écrire les pages web.
+                        Il est utilisé pour structurer le contenu d'une page web en définissant des éléments tels que
+                        les titres, les paragraphes, les liens, les images, et d'autres types de contenu. HTML est la base de
+                        la plupart des sites web et est souvent utilisé en conjonction avec d'autres
+                        technologies comme CSS (Cascading Style Sheets) pour le style et JavaScript pour l'interactivité.</p>
+                </div>
+                <div class="slide" id="slide-2">
+                    <h2>Tim Berners-Lee?</h2>
+                    <p>Pour répondre à la question « Qu’est-ce que le HTML ? », il est important de comprendre son histoire. Le HTML, créé en 1989
+                        par Tim Berners-Lee, a marqué la naissance du World Wide Web. Initialement conçu pour permettre aux chercheurs du CERN de
+                        partager des informations, il est rapidement devenu un langage universel pour structurer les documents en ligne. </p>
+                </div>
+                <div class="slide" id="slide-3">
+                    <h2>Est-il possible de créer un site web sans maîtriser la programmation ?</h2>
+                    <p>Avec l'avènement de constructeurs de sites web faciles à utiliser et de systèmes de gestion de contenu (CMS) comme Wix, créer un site web sans savoir coder est devenu tout à fait possible. Wix offre une interface intuitive, une fonctionnalité « glisser-déposer » et des templates prédéfinis, ce qui permet aux particuliers et aux entreprises de créer des sites web de qualité professionnelle avec un minimum d'expertise technique.</p>
+                </div>
+            </div>
+
+            <!-- On crée les boutons qui seront visibles -->
+            <div class="navigation-clic">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+            </div>
+
+        </div>
+
+
+        </main>
+</body>
+</html>
