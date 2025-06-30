@@ -1,17 +1,37 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    position: relative;
+    z-index: 0;
 }
 
 /* Ici on modifie le header (la nav barre avec les liens, le logo et le bouton */
 #container-header {
     display: flex;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+    /* L'ombre passera par-dessus le main */
 }
 
 #container-logo-adrar {
     height: 100%;
     width: 20%;
+}
+
+#logo-adrar-img {
+    left: 2rem;
+    top: 5px;
+    position: absolute;
+    width: 65px;
+    height: 85px;
 }
 
 #container-header-link {
@@ -27,6 +47,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -43,6 +65,31 @@ body {
     justify-content: center;
     align-self: center;
 }
+#container-bouton-contact {
+    flex: 0 0 auto;
+    /* Ne grandit pas, ne rétrécit pas */
+    margin-left: auto;
+    /* Pousse le bouton vers la droite */
+}
+
+#bouton-contact {
+    background-color: #171A22;
+    color: white;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+#bouton-contact:hover {
+    background-color: #45474E;
+    color: white;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+
 
 /* ---------------------------------------------------- */
 
