@@ -5,6 +5,11 @@ body{
     cursor: default;
 }
 
+::selection{
+    background-color: #E44332;
+    color: aliceblue;
+}
+
 main {
     position: relative;
     z-index: 0;
@@ -176,7 +181,7 @@ display: grid;
 
 .side ul li:hover{
     padding-bottom: 4px;
-    color: #53B9E7;
+    color: #E44332;
     
 
 }
