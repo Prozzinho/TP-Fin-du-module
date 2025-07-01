@@ -166,12 +166,12 @@ display: grid;
     flex-direction: row;
 }
 .side {
-  flex: 30%;
+  flex: 10%;
   padding-left: 20px;
 }
 
 .main {
-    flex: 65%;
+    flex: 70%;
 }
 
 .side ul li{
