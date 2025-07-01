@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+main {
+    position: relative;
+    z-index: 0;
+}
+/* Ici on modifie le header (la nav barre avec les liens, le logo et le bouton */
+#container-header {
+    display: flex;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 1rem;
+    position: relative;
+    z-index: 1; /* L'ombre passera par-dessus le main */
+}
+
+#container-logo-adrar {
+    height: 100%;
+    width: 20%;
+}
+#logo-adrar-img{
+    left:2rem;
+    top: 5px;
+    position: absolute;
+    width: 65px;
+    height: 85px;
+}
+
+#container-header-link {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#container-header-link ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin:0;
+    padding: 0;
+
+}
+
+#container-header-link ul li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#container-bouton-contact {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+/* ---------------------------------------------------- */
+
+.bg-img{
+    background-image: url(./image/background-header.png);
+    background-repeat: no-repeat;
+background-size: 100% auto;
+    height: 30rem;
+     
+}
+#container-bouton-contact {
+    flex: 0 0 auto; /* Ne grandit pas, ne rétrécit pas */
+    margin-left: auto; /* Pousse le bouton vers la droite */
+}
+
+#bouton-contact {
+    background-color: #333;
+    color: white;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+.grid-bg{
+display: grid;
+  grid-template-columns: 10% 30% 30% 30%;
+  grid-template-rows: 20% 35% 35% 10%;
+      height: 30rem;
+}
+.Text-bg{
+ color:black;
+ display: grid;
+  grid-column-start: 2;
+    grid-row-start:2;
+    align-self: end;
+    
+}
+.surligne {
+   background-color: white;
+        display: inline;
+
+}
+.input-bg{
+    display: grid;
+  grid-column-start: 2;
+    grid-row-start:3;
+     width: 100%;
+     height: 10px;
+    max-width: 300px; /* Ajustez selon vos besoins */
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px; /* Bordures très arrondies */
+    font-size: 16px;
+    color: #666;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    align-self: start;
+}
+.input-bg:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.input-bg::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+.search-icon{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background-color:black;
+    border-radius: 50px;
+}
+.search-container{
+    
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espace entre l'input et l'icône */
+    grid-column-start: 2;
+    grid-row-start: 3;
+    align-self: start;
+}
+/* header navbar color on hover */
+header div ul li{
+    padding: 20px 30px;
+}
+header div ul li:nth-child(1):hover{
+background-color: #F69E07;
+}
+header div ul li:nth-child(2):hover{
+background-color: #81b53e;
+}
+header div ul li:nth-child(3):hover{
+background-color: #E44332;
+}
+header div ul li:nth-child(4):hover{
+background-color: #53B9E7;
+}
+header div ul li:nth-child(5):hover{
+background-color: #81b53e;
+}
+
