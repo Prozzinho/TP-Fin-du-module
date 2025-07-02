@@ -252,8 +252,8 @@ hr {
     border-radius: 10px;
 }
 
-#box-template-body p {
-    line-height: 1.5; /* ou la valeur que tu veux */
+#box-template-body div {
+    line-height: 1; /* ou la valeur que tu veux */
     text-align: center;
     max-height: 60vh; /* Limite la hauteur à 60% de la fenêtre */
     overflow-y: auto; /* Ajoute une barre de scroll si besoin */
@@ -382,7 +382,7 @@ hr {
     border: solid 2px #4aa14a;
 }
 
-.box-popup p {
+.box-popup div {
     display: none;
 }
 

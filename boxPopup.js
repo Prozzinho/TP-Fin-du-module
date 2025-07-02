@@ -11,13 +11,13 @@ boxPopups.forEach(box => {
 
             // Récupère le titre et le paragraphe de la box et la couleur de fond
             const titre = box.querySelector('h3').textContent;
-            const paragraphe = box.querySelector('p').innerHTML; // Utilise innerHTML pour conserver les balises HTML
+            const paragraphe = box.querySelector('.text-popup').innerHTML; // Utilise innerHTML pour conserver les balises HTML
             const colorBox = getComputedStyle(box).backgroundColor;
             
 
             // Met à jour le contenu du template
             const templateHeader = document.querySelector('#box-template-header h3');
-            const templateBody = document.querySelector('#box-template-body p');
+            const templateBody = document.querySelector('#box-template-body d');
         
 
             boxToDisplay.style.backgroundColor = colorBox; // Change la couleur de fond de la box 
