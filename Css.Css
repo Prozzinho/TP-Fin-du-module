@@ -63,6 +63,7 @@ a{
 #container-header-link ul li a {
     text-decoration: none;
     color: black;
+    border: #33333300;
 
 }
 
@@ -194,7 +195,6 @@ display: grid;
 }
 
 .side ul li a:hover {
-    padding-bottom: 4px;
     color: #E44332;
 }
 
@@ -240,9 +240,37 @@ display: grid;
 
 
 
-.space-content-footer p{
-    margin-bottom: 300px;
+
+/* Style du déclencheur de menu déroulant */
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+/* Style pour la flèche */
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+/* 1. Cacher le sous-menu par défaut */
+.submenu {
+    display: none;
+    padding-left: 20px; 
+}
+
+
+
+/* 2. Afficher le sous-menu quand la classe .open est présente */
+.submenu.open {
+    display: block;
+}
+
+/* 3. Faire pivoter la flèche quand le menu est ouvert */
+.dropdown-toggle.open .arrow {
+    transform: rotate(180deg);
+}
+
 
 /* ------------------------------------------------------------ */
 /* Ici le footer */
