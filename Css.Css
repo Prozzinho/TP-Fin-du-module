@@ -211,7 +211,7 @@ display: grid;
     display: flex;
     flex-direction: column;
     flex-basis: 70%;
-    margin: 0 10%;
+    margin: 100px 0 10% 10%;
 }
 
 .video-and-titles {
@@ -240,7 +240,9 @@ display: grid;
 
 
 
-
+.space-content-footer p{
+    margin-bottom: 300px;
+}
 
 /* ------------------------------------------------------------ */
 /* Ici le footer */
