@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Javascript.css">
+    <script src="autoCarousel.js" defer></script>
+    <script src="boxPopup.js" defer></script>
+    <title>JavaScript</title>
+</head>
+<body>
+        <header id="container-header">
+
+            <!-- Container avec juste le logo -->
+            <div id="container-logo-adrar">
+                <img src="image/logo-adrar.png" alt="Logo Adrar" id="logo-adrar-img" height="80" width="60">
+            </div>
+            <!---------------------------------->
+
+            <!-- Container pour la nav entre les pages -->
+            <div id="container-header-link">
+                <ul>
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="Html.html">HTML</a></li>
+                    <li><a href="Css.html">CSS</a></li>
+                    <li><a href="Javascript.html">JavaScript</a></li>
+                    <li><a href="Api.html">API</a></li>
+                </ul>
+            </div>
+            <!---------------------------------->
+            <!-- Container contenant le bouton contactez-nous -->
+            <div id="container-bouton-contact">
+                <a id="bouton-contact" href="Contact.html">Contactez-nous</a>
+            </div>
+            <!---------------------------------->
+        </header>
+
+
+        <div id="box-template-popup">
+            <button id="close-popup" style="position:absolute;top:10px;right:10px;">&times;</button>
+            <div id="box-template-header">
+                <h3 id="box-template-h3"></h3>
+            </div>
+
+            <hr id="hr-popup"> <!-- Ligne de séparation -->
+
+            <div id="box-template-body">
+                <div id="box-template-paragraphe"></div>
+            </div>
+        </div>
+
+        <main>
+            <!------------------------------------------------------------------------------>
+            <!-- On crée le carrousel (container global) -->
+            <div class="carousel">
+
+                <!-- Ici les différentes slides -->
+                <div class="slides">
+                    <div class="slide" id="slide-1">
+                        <h2>Qu'est ce que le JavaScript ?</h2>
+                        <p>Le JavaScript est un langage de programmation utilisé principalement pour rendre les pages web interactives. Il permet d'ajouter des éléments dynamiques comme des menus déroulants, des animations, ou encore des formulaires réactifs. Fonctionnant dans le navigateur, il est essentiel pour le développement web moderne aux côtés du HTML et du CSS.</p>
+                    </div>
+                    <div class="slide" id="slide-2">
+                        <h2>Brendan Eich?</h2>
+                        <p>Le JavaScript a été créé en 1995 par Brendan Eich, un ingénieur de chez Netscape Communications. Il l’a développé en seulement 10 jours pour être intégré au navigateur Netscape Navigator. À l'origine, le langage s’appelait Mocha, puis LiveScript, avant de prendre le nom de JavaScript (pour des raisons marketing, même s’il n’a pas grand-chose à voir avec Java).</p>
+                    </div>
+                    <div class="slide" id="slide-3">
+                        <h2>À quoi sert JavaScript dans un site web ?</h2>
+                        <p>JavaScript sert à rendre un site web interactif et dynamique. Il permet, par exemple, de faire apparaître des menus, de valider des formulaires sans recharger la page, de créer des animations ou encore de mettre à jour du contenu en temps réel. Grâce à JavaScript, l'expérience utilisateur devient plus fluide et agréable.</p>
+                    </div>
+                </div>
+
+                <!-- On crée les boutons qui seront visibles -->
+                <div class="navigation-clic">
+                    <label for="slide1" data-slide="0"></label>
+                    <label for="slide2" data-slide="1"></label>
+                    <label for="slide3" data-slide="2"></label>
+                </div>
+            </div>
+            <!------------------------------------------------------------------------------>
+
+            <hr> <!-- Ligne de séparation -->
+
+            <!-- Container pour la vidéo le titre et le p -->
+            <div class="container-video">
+                <!-- Container qui contient le titre et le paragraphe -->
+                <div id="container-titre-texte">
+                    <h2>JavaScript en 100 Secondes</h2>
+                    <p>Dans la vidéo ci-dessous(en anglais), vous pouvez voir ce qu'est le JavaScript en 100 secondes.</br>Crédit : @Fireship</p>
+                </div>
+                <!-- Container qui contient juste la vidéo -->
+                <div id="video-javascript">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DHjqpvDnNGE?si=S8EYlwzwEEMc3-wP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+            <hr> <!-- Ligne de séparation -->
+
+            <div id="container-box-list">
+                <div class="box-popup" id="box-popup-1" data-box="1">
+                    <h3>Résumé</h3>
+                    <div class="text-popup">
+                        <p>JavaScript (JS) est un langage de programmation principalement utilisé pour rendre les sites web interactifs et dynamiques. Il fait partie des technologies fondamentales du web, avec HTML (structure) et CSS (mise en forme).</p>
+                        <p><strong>L’origine de JavaScript :</strong></p><p>Au début des années 1990, le Web était encore très simple : les pages web étaient statiques, construites uniquement avec HTML (pour la structure) et CSS (pour la présentation). Il n’y avait aucun moyen d’ajouter de l’interactivité sans recharger la page. C’est dans ce contexte que Netscape Communications, l’entreprise derrière le célèbre navigateur Netscape Navigator, a voulu créer un langage de programmation capable d'ajouter du dynamisme aux pages web directement dans le navigateur.</p>
+                        <p><strong>Eich et la création de JavaScript: </strong></p><p>En 1995, Netscape engage Brendan Eich, un développeur talentueux, pour créer ce nouveau langage. Sa mission : développer un langage simple, rapide à apprendre, et capable de fonctionner directement dans le navigateur, en complément du langage Java (très populaire à l’époque).</p><p>Brendan Eich a alors créé le langage en seulement 10 jours ! Ce langage était à l'origine appelé Mocha, puis renommé LiveScript, avant d’être lancé officiellement sous le nom JavaScript, une décision prise par Netscape à des fins marketing.</p>
+                        <p><strong>Pourquoi le nom "JavaScript" ? :</strong></p><p>Même si JavaScript n’a rien à voir avec le langage Java, Netscape a choisi ce nom pour profiter de la popularité de Java à ce moment-là. Cela a créé une confusion qui persiste encore aujourd’hui. Java est un langage compilé, fortement typé, orienté objet, utilisé pour de grosses applications. JavaScript est un langage interprété, souple, et destiné à rendre les pages web interactives.</p>
+                        <p><stron>Standardisation et évolution :</stron></p><p>Face au succès rapide de JavaScript et à la concurrence entre navigateurs (notamment avec Internet Explorer de Microsoft), il devenait essentiel de créer un standard commun. En 1997, le langage a été standardisé sous le nom d’ECMAScript (par l’organisation ECMA International). Depuis, JavaScript continue d’évoluer à travers différentes versions d’ECMAScript (ES5, ES6, etc.), apportant des améliorations et de nouvelles fonctionnalités.</p>
+                    </div>
+                </div>
+
+                <div class="box-popup" id="box-popup-2" data-box="2">
+                    <h3>Qui a créé le JavaScript ?</h3>
+                    <div class="text-popup">
+                        <p><strong>Le créateur de JavaScript : Brendan Eich</strong></p><p>JavaScript a été créé en 1995 par un informaticien américain nommé Brendan Eich. À l’époque, il travaillait pour une entreprise appelée Netscape Communications, qui développait un des tout premiers navigateurs web populaires : Netscape Navigator.</p>
+                        <p><strong>Pourquoi a-t-il été créé ?</strong></p><p>À cette époque, les sites web étaient très simples : ils contenaient uniquement du texte, des images et quelques liens. Il n’y avait aucune interaction possible sans recharger toute la page. Netscape voulait donc un langage de script capable de :</p>
+                        <p>Rendre les pages plus interactives (boutons, menus, formulaires…)</p><p>Etre facile à apprendre pour les développeurs web</p><p>Fonctionner directement dans le navigateur, sans avoir besoin de serveur.</p>
+                        <p><strong>Une création en 10 jours</strong></p><p>Brendan Eich a été recruté chez Netscape pour créer ce langage. Il l’a conçu en seulement 10 jours, ce qui est exceptionnel pour un langage de programmation. Le résultat était un langage simple, flexible et dynamique, parfait pour ajouter des interactions à une page web.</p>
+                        <p><strong>Les noms avant "JavaScript" :</strong></p><p>Le langage a d’abord été nommé :</p><p>Mocha (nom interne pendant le développement)</p><p>Puis LiveScript</p><p>Et enfin JavaScript, pour des raisons marketing. Netscape voulait surfer sur la popularité du langage Java, même si les deux n’ont presque rien en commun.</p>
+                        <p><strong>Standardisation</strong></p><p>Avec la popularité de JavaScript, il a fallu créer un standard officiel pour éviter que chaque navigateur n’ait sa propre version du langage. En 1997, le langage a été standardisé sous le nom ECMAScript, qui définit les règles du langage que tous les navigateurs doivent suivre.</p>
+                    </div>
+                </div>
+
+                <div class="box-popup" id="box-popup-3" data-box="3">
+                    <h3>Syntaxe de JavaScript</h3>
+                    <div class="text-popup">
+                        <p>La syntaxe de JavaScript désigne l’ensemble des règles et conventions que l’on doit respecter pour écrire correctement du code dans ce langage.<p><p>Elle est inspirée de langages comme Java ou C, tout en restant plus souple et accessible, ce qui en fait un bon choix pour les débutants.</p>
+                        <p>En JavaScript, les instructions sont généralement écrites ligne par ligne et se terminent souvent par un point-virgule, même si ce n’est pas strictement obligatoire.</p><p>Le langage permet de déclarer des variables pour stocker des informations, et de manipuler différents types de données comme du texte, des nombres, des valeurs vraies ou fausses, des tableaux, ou encore des objets.</p>
+                        <p>Les blocs de code, comme ceux des conditions ou des boucles, sont délimités par des accolades.</p><p>JavaScript utilise aussi des opérateurs pour effectuer des calculs, comparer des valeurs ou combiner des conditions.</p>
+                        <p>Le langage repose sur une logique événementielle : il est capable de réagir aux actions de l’utilisateur, comme un clic ou une saisie au clavier.</p><p>On peut également écrire des fonctions pour organiser le code, le rendre réutilisable et plus clair.</p>
+                        <p>En résumé, la syntaxe de JavaScript est à la fois simple et puissante, ce qui permet de créer des sites web interactifs, dynamiques et modernes.</p>
+                    </div>
+                </div>
+
+                <div class="box-popup" id="box-popup-4" data-box="4">
+                    <h3>Sécurité</h3>
+                    <div class="text-popup">
+                        <p>JavaScript et la structure DOM des pages HTML/XML ont quelques failles de sécurité.</p><p>En effet, des scripts malveillants peuvent se cacher dans le code d'une page web et s'exécuter sur l'ordinateur cible de l'utilisateur du Web.</p>
+                            <p>Les fournisseurs de navigateurs web tentent de réduire ce risque avec deux restrictions :</p>
+                            <p>l'une est de faire exécuter ces scripts dans un espace à part des autres données (sandbox) dans lequel seules des actions relatives au web (mouvements de souris, affichage de pixel, communications) peuvent être exécutées, sans avoir accès au système de fichier principal ;</p>
+                            <p>la deuxième est de n'exécuter les scripts que selon les contraintes de same-origin policy : dans cet esprit, un site Web ne doit pas avoir accès aux informations telles que les noms d'utilisateur et mot de passe ou cookies reçus des autres sites visités.</p>
+                            <p>Les vulnérabilités de JavaScript sont bien souvent des brèches d'au moins l'un de ces deux principes.</p>
+                            <p>Certains sous-ensembles du langage Javascript tels que JavaScript—ADsafe ou Secure ECMAScript (SES) fournissent de plus grands niveaux de sécurité, en particulier pour les scripts créés par des tierces parties (notamment les publicités).</p><p>Caja est un autre logiciel pour inclure et isoler de manière sécurisée du JavaScript et du HTML tierce partie.</p>
+                            <p>Politique de sécurité du contenu est la principale méthode destinée à assurer que seul un script de confiance est exécuté sur une page Web. Meltdown est une vulnérabilité indépendante de Javascript, qui peut notamment être exploitée en Javascript.</p>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-popup" id="box-popup-5" data-box="5">
+                    <h3>Utilisation</h3>
+                    <div class="text-popup">
+                        <p>Le code JavaScript a besoin d'un objet global pour y rattacher les déclarations (variables et fonctions) avant d'exécuter des instructions.</p><p>La situation la plus connue est celle de l'objet window obtenu dans le contexte d'une page web.</p><p>D'autres environnements sont possibles dont celui fourni par Adobe ou l'environnement Node.js (voir plus bas Autres utilisations).</p>
+                            <p>Les principaux domaines d'application de JavaScript sont avant tout la programmation, les activités de programmation de base et tout ce qui est lié à l'informatique.</p>
+                            <p><strong>Dans une page web :</strong></p><p>Du code JavaScript peut être intégré directement au sein des pages web, pour y être exécuté sur le poste client.</p><p>C'est alors le navigateur web qui prend en charge l'exécution de ces programmes appelés scripts.</p>
+                            <p>Généralement, JavaScript sert à contrôler les données saisies dans des formulaires HTML, ou à interagir avec le document HTML via l'interface Document Object Model, fournie par le navigateur (on parle alors parfois de HTML dynamique ou DHTML).</p><p>Il est aussi utilisé pour réaliser des applications dynamiques, des transitions, des animations ou manipuler des données réactives, à des fins ergonomiques ou cosmétiques.</p>
+                            <p>JavaScript n'est pas limité à la manipulation de documents HTML et peut aussi servir à manipuler des documents SVG, XUL et autres dialectes XML.</p>
+                            <p><strong>Intégration :</strong></p><p>Il existe plusieurs façons d’intégrer JavaScript dans du code html:</p>
+                            <p>Dans des attributs d’évènements html : &lt;button onclick="alert('clic !')"&gt;clic ici&lt;/button&gt;. Le code JavaScript alert('clic !')sera exécuté quand le bouton sera cliqué.</p>
+                            <p>Dans des balises &lt;script&gt; : &lt;script&gt;//ici on peut mettre du code JavaScript&lt;/script&gt;</p>
+                            <p>Dans des fichiers externes : &lt;script src="chemin/ver/mon/fichier.js"&gt;&lt;/script&gt;</p>
+
+                    </div>
+                </div>
+
+                <div class="box-popup" id="box-popup-6" data-box="6">
+                    <h3>Autres utilisations</h3>
+                    <div class="text-popup">
+                        <p><strong>Dans la barre d’adresse d’un navigateur :</strong></p><p>aper des adresses comme javascript: ducodejavascript provoque l’exécution de ducodejavascript. Exemple: javascript: alert(document.cookie) provoque l’affichage des cookies de la page.</p>
+                        <p><strong>Sur un serveur web :</strong></p><p>JavaScript peut également être utilisé comme langage de programmation sur un serveur HTTP à l'image des langages comme PHP, ASP, etc.</p><p>D'ailleurs le projet CommonJS travaille dans le but de spécifier un écosystème pour JavaScript en dehors du navigateur (par exemple sur le serveur ou pour les applications de bureau natives).</p><p>Le projet a été lancé par Kevin Dangoor en janvier 2009.</p><p>Le projet CommonJS n'est pas affilié avec le groupe de l'Ecma International TC39 travaillant sur ECMAScript, mais certains membres du TC39 participent au projet.</p>
+                        <p>Historiquement, JavaScript était proposé sur les serveurs de Netscape, par la suite distribués par Sun Microsystems sous les noms iPlanet et Sun ONE, mais JScript peut aussi être utilisé sur les serveurs Internet Information Services de Microsoft.</p><p>JScript peut d'ailleurs servir pour scripter une plate-forme Microsoft Windows via Windows Scripting Host (WSH).</p>
+                        <p>Il existe par ailleurs des projets indépendants et Open Source d'implémentation de serveurs en JavaScript.</p><p>Parmi eux, on pourra distinguer Node.js, une plateforme polyvalente de développement d'applications réseau se basant sur le moteur JavaScript V8 et les spécifications CommonJS.</p>
+
+
+                    </div>
+                </div>
+
+                <div class="box-popup" id="box-popup-7" data-box="7">
+                    <h3>Autres supports</h3>
+                    <div class="text-popup">
+                        <p>ActionScript, utilisé dans Adobe Flash, est aussi une mise en œuvre d'ECMAScript. Il permet de manipuler tous les éléments de l'animation, considérés comme des objets. JavaScript peut être utilisé pour scripter d'autres applications Adobe (Photoshop, Illustrator, …), ce qui permet d'avoir des scripts indépendants de la plate-forme (Microsoft Windows, Apple OSX, Linux…).</p>
+                        <p>JavaScript est enfin utilisé dans la plate-forme de développement de Mozilla, sur laquelle sont basés plusieurs logiciels comme des navigateurs Web, pour des tâches relatives à l'interface utilisateur et à la communication interne (ex. : les extensions de Firefox et Thunderbird sont installées à base de fichiers XPI utilisant le JavaScript. Voir aussi Prefs.js).</p>
+                        <p>Depuis 2004, l'objet js de l'environnement de programmation graphique Max/MSP permet d'ouvrir une fenêtre pour programmer en JavaScript, au sein même d'un programme Max/MSP.</p>
+                        <p>Les logiciels ImageJ et CaRMetal sont munis de consoles JavaScript, qui leur permettent d'écrire des scripts dans un contexte graphique. Algobox utilise JavaScript pour la syntaxe de ses fonctions. H5P se sert de HTML5 et Javascript pour faciliter la création de contenus interactifs en ligne.</p>
+                        <p>JavaScript est aussi utilisé dans un contenu BIFS pour l'exploitation des événements. Pour cela la spécification BIFS fournit un nœud Script pour incorporer de l'ECMAScript.</p>
+                        <p>La suite bureautique OpenOffice.org permet d'utiliser JavaScript comme langage de macros.</p>
+                        <p>JavaScript est aussi utilisable en shell[28] ou avec les gadgets Vista.</p>
+                        <p>Le format graphique vectoriel SVG incorpore le langage ECMAscript pour créer des graphiques interactifs directement exploitable dans un navigateur.</p>
+                        <p>Enfin, JavaScript est également utilisé pour dynamiser le QML de la bibliothèque graphique Qt.</p>
+                    </div>
+                </div>
+
+                <div class="box-popup" id="box-popup-8" data-box="8">
+                    <h3>Particularités du langage</h3>
+                    <div class="text-popup">
+                        <p><strong>Liaison des identifiants :</strong></p><p>En JavaScript, toutes les expressions (identifiants, littéraux et opérateurs et leurs opérandes) sont de type référence (comme en Python et Ruby, mais à la différence du C++, Java, C#, Swift et OCaml qui possèdent aussi des expressions de type valeur), c'est-à-dire que leur évaluation ne produit pas une donnée directement mais une référence vers une donnée. La référence se nomme le référent de l’expression et la donnée le référé de l’expression.</p>
+                                    <p>En JavaScript, l'affectation d'une variable modifie son référent, autrement dit, elle lie la variable à une autre donnée : on parle de changement de liaison de la variable (en anglais variable rebinding).</p>
+                                    <img src="image/JavaScript/carbon.png" alt="Exemple de code JavaScript" class="img-js" width="100%" height="100%">
+                                    <p><strong>Portée lexicale des variables :</strong></p><p>La portée lexicale d'une variable est la partie d'un programme où la liaison entre son identifiant et sa donnée est valide. En JavaScript, la portée lexicale d'une variable peut être de deux types, selon le mot-clé utilisé pour la déclarer :</p>
+                                    <p>var : au niveau de la fonction (ou de l'espace global) où elle est déclarée (comme en Python, Ruby) ;</p>
+                                    <p>let ou const (introduits dans ECMAScript 6) : au niveau du bloc où elle est déclarée (comme en C++, Java, C#) — une fonction étant un bloc particulier.</p>
+                                    <p>Depuis le support de let par les navigateurs modernes, var ne doit plus être utilisé et son utilisation est considéré comme une mauvaise pratique.</p>
+                                    <img src="image/JavaScript/carbon2.png" alt="Exemple de code JavaScript" class="img-js" width="100%" height="100%">
+                                    <p>Une variable peut être affectée ou masquée par une fonction enfant de la fonction (ou de l'espace global) où elle est déclarée :</p>
+                                    <img src="image/JavaScript/carbon3.png" alt="Exemple de code JavaScript" class="img-js" width="100%" height="100%">
+                    </div>
+                </div>
+
+                <div class="box-popup" id="box-popup-9" data-box="9">
+                    <h3>Liens utiles</h3>
+                    <div class="text-popup"><p><a href="https://fr.wikipedia.org/wiki/JavaScript#Particularit%C3%A9s_du_langage" target="_blank">Wikipédia : JavaScript.</a></p>
+                                            <p><a href="https://www.youtube.com/watch?v=DHjqpvDnNGE&ab_channel=Fireship" target="_blank">La vidéo de @Fireship.</a></p>
+                                            <p><a href="https://www.w3schools.com/js/default.asp" target="_blank">Si vous voulez en apprendre plus sur l'HTML.</a></p></div>
+                </div>
+            </div>
+            <hr> <!-- Ligne de séparation -->
+        </main>
+        <!---------------------------------------------------------------------------------------------------->
+        <!-- Footer -->
+        <footer>
+            <div class="grid-debut-footer">
+                <div class="img-display">
+                    <img class="img-qualiopi" src="./image/Qualiopi.png" alt="">
+                    <img class="img-MCF" src="./image/MCF.png" alt="">
+                </div>
+                <div class="img-display-sm">
+                    <img class="sm-width" src="./image/linkedIn.svg" alt="">
+                    <img class="sm-width" src="./image/fb.svg" alt="">
+                    <img class="sm-width" src="./image/twitt.svg" alt="">
+                    <img class="sm-width" src="./image/Logo-Instagram-2016.svg" alt="">
+                </div>
+
+            </div>
+            <div class="barre">
+
+            </div>
+
+            <div class="grid-footer">
+
+                <div>
+                    <h4>l'ADRAR</h4>
+                    <ul class="align-ul">
+                        <li class="li-footer"><a href="" class="ahref-footer">A propos</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Nos certifications</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Formations à distance</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Nos offres d'emploi</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Enquête de satisfaction</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Engagements, politique, objectifs<br> et
+                                indicateurs pour réussir</a></li>
+                    </ul>
+                </div>
+                <div>
+
+                    <h4>LA FORMATION</h4>
+                    <ul class="align-ul">
+                        <li class="li-footer"><a href="" class="ahref-footer">Santé et Social</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Tertiaire</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Métiers du numérique</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Électricité industrielle</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Systèmes Embarqués</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">2nd oeuvres équipement</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Sécurité</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Carrières & Emploi</a></li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h4>VOUS ÊTES</h4>
+                    <ul class="align-ul">
+                        <li class="li-footer"><a href="" class="ahref-footer">Salariés</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Alternants</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Demandeurs d’emploi</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Entreprises</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Apprentis</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Sans bac</a></li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h4>LIENS UTILES</h4>
+                    <ul class="align-ul">
+                        <li class="li-footer"><a href="" class="ahref-footer">CPF</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Digital Academy</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Blog</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">Contact</a></li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h4>NOS CENTRES</h4>
+                    <ul class="align-ul">
+                        <li class="li-footer"><a href="" class="ahref-footer">ADRAR Formation (siège)</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">ADRAR Pôle Numérique</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">ADRAR Toulouse Centre</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">ADRAR Perpignan</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">ADRAR Montpellier</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">ADRAR Tarbes</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">ADRAR Toulouse Campus</a></li>
+                        <li class="li-footer"><a href="" class="ahref-footer">ADRAR Carcassonne</a></li>
+
+                    </ul>
+                </div>
+                </ul>
+            </div>
+            <div class="grid-footer-bis">
+                <p class="p-footer-end">
+                    © 2025 ADRAR Formation
+                </p>
+                <div class="text-footer-end-right">
+                    <p class="p-footer-end-bis">
+                        <a href="" class="link-footer-end">Mentions Légales.</a>
+                    </p>
+                    <p class="p-footer-end-bis">
+                        <a href="" class="link-footer-end">Vie privée.</a>
+                    </p>
+                    <p class="p-footer-end-bis">
+                        <a href="" class="link-footer-end">Conditions générales de vente.</a>
+                    </p>
+                    <p class="p-footer-end-bis link-footer-end exception">
+                        Développé par Velcome SEO.
+                    </p>
+                </div>
+            </div>
+
+        </footer>
+</body>
+</html>
