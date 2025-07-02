@@ -185,6 +185,7 @@ display: grid;
 
 .side ul li{
     padding-bottom: 4px;
+    font-size: 0.9rem;
 }
 
 .side ul li a:hover{
@@ -194,5 +195,9 @@ display: grid;
 
 .side a:link{
     text-decoration: none;
+    color: black;
+}
+
+.side a {
     color: black;
 }
