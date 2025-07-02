@@ -202,3 +202,8 @@ display: grid;
 .side a {
     color: black;
 }
+
+a{
+    color: #E44332;
+    text-decoration: none;
+}
