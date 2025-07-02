@@ -215,9 +215,9 @@ display: grid;
 }
 
 .video-and-titles {
-  display: flex;
-  align-items: center; 
-  gap: 20px; 
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
 }
 
 .titles-intro-css h1,
@@ -229,9 +229,17 @@ display: grid;
     margin-bottom: 10px;
 }
 
+
 .main ul li{
     padding-bottom: 10px;
+    list-style-type: disc;
+    font-size: 0.90rem;
 }
+
+
+
+
+
 
 
 /* ------------------------------------------------------------ */
