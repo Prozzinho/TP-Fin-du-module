@@ -17,7 +17,7 @@ boxPopups.forEach(box => {
 
             // Met à jour le contenu du template
             const templateHeader = document.querySelector('#box-template-header h3');
-            const templateBody = document.querySelector('#box-template-body d');
+            const templateBody = document.querySelector('#box-template-body div');
         
 
             boxToDisplay.style.backgroundColor = colorBox; // Change la couleur de fond de la box 
