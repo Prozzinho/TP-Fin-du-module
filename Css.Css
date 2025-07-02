@@ -166,17 +166,18 @@ display: grid;
 
 .row {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    gap: 1rem;
+    
 }
 .side {
-  flex: 10%;
+  flex-basis: 10%;
   padding-left: 20px;
 }
 
 .main {
-    flex: 70%;
-    padding-right: 200px;
+    flex-basis: 70%;
+    margin: 0 10%;
 }
 
 .side ul{
