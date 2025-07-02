@@ -75,6 +75,8 @@ header div ul li{
     transition-duration: 0.25s;
     
 }
+
+
 header div ul li:nth-child(1):hover{
 background-color: #F69E07;
 }
@@ -90,6 +92,8 @@ background-color: #53B9E7;
 header div ul li:nth-child(5):hover{
 background-color: #81b53e;
 }
+
+
 
 /* ---------------------------------------------------- */
 
@@ -172,6 +176,7 @@ display: grid;
 
 .main {
     flex: 70%;
+    padding-right: 200px;
 }
 
 .side ul li{
