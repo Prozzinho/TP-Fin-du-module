@@ -271,6 +271,25 @@ display: grid;
     transform: rotate(180deg);
 }
 
+.syntaxe_button {
+    background-color: #E44332;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.syntaxe_button:hover {
+    background-color: #200906;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
 
 /* ------------------------------------------------------------ */
 /* Ici le footer */
