@@ -1,0 +1,551 @@
+/* global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.blur {
+ filter: blur(5px);
+ transition: filter 0.3s;
+}
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/* Ici on modifie le header (la nav barre avec les liens, le logo et le bouton */
+#container-header {
+    display: flex;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+    /* L'ombre passera par-dessus le main */
+}
+
+#container-logo-adrar {
+    height: 100%;
+    width: 20%;
+}
+
+#logo-adrar-img {
+    left: 2rem;
+    top: 5px;
+    position: absolute;
+    width: 65px;
+    height: 85px;
+}
+
+#container-header-link {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#container-header-link ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+
+}
+
+#container-header-link ul li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#container-bouton-contact {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+#container-bouton-contact {
+    flex: 0 0 auto;
+    /* Ne grandit pas, ne rétrécit pas */
+    margin-left: auto;
+    /* Pousse le bouton vers la droite */
+}
+
+#bouton-contact {
+    background-color: #171A22;
+    color: white;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+#bouton-contact:hover {
+    background-color: #45474E;
+    color: white;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+#container-header-link>ul>li>a:hover{
+color:#7A7C7D;
+}
+
+/* ---------------------------------------------------- */
+
+/* ------------------------------------------------------------------ */
+/* Ici on modifie le main */
+
+main {
+    width: 100%;
+}
+
+
+/* Ici on modifie le carousel */
+/* Container global du carousel */
+.carousel {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* container qui fait 300% de large (mais on affiche que 100%) */
+.slides {
+    display: flex;
+    width: 300%; /* 3 slides, donc 300% */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/* Chaque slide prend 1/3 de .slides(100% de large chacun du coup)*/
+.slide {
+    width: 33.33%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    height: 200px;
+    position: relative;
+    display: none;  
+}
+
+.slide.active {
+    display: flex;
+}
+
+/* ici on modifie la couleur de chaque slide */
+.slide:nth-child(1) {
+    background-color: lightblue;
+}
+
+.slide:nth-child(2) {
+    background-color: lightcoral;
+}
+
+.slide:nth-child(3) {
+    background-color: lightsalmon;
+}
+/* ------------------------------------------- */
+
+/* Texte h2 et p */
+.slide h2 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.slide p {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+
+/* Ici les boutons rond, on la place au millieu en bas de la slide */
+.navigation-clic {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.navigation-clic label {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.navigation-clic label:hover {
+    background: gray;
+}
+
+div #container-video {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#container-titre-texte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-titre-texte h2, #container-titre-texte p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#video-html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    width: 33%;
+    margin: 30px auto;
+}
+/* --------------------------------------------------------------- */
+
+#box-template-popup { /* Box popup masqué par défaut */
+    display: none; /* Masqué par défaut */
+    transform: translate(0, 0);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000; /* Au-dessus des autres éléments */
+    border: solid 2px #171A22;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+
+}
+
+#box-template-popup.open { /* Classe pour afficher la box */
+    display: block; /* Affiche la box */
+    opacity: 1; /* Rendre visible */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    background-color: lightgrey;
+    opacity: 90%;
+    border-radius: 10px;
+}
+
+#box-template-body div {
+    line-height: 1; /* ou la valeur que tu veux */
+    text-align: center;
+    max-height: 60vh; /* Limite la hauteur à 60% de la fenêtre */
+    overflow-y: auto; /* Ajoute une barre de scroll si besoin */
+}
+
+
+#hr-popup {
+    width: 33%;
+    border: solid 1px black;
+    padding: 0;
+    margin: 2px auto;
+    
+}
+
+#box-template-h3 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#container-box-pop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#container-box-text {
+    text-align: center;
+}
+
+#container-box-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 50px;
+}
+
+.box-popup {
+    width: 26%;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+
+}
+
+
+#box-popup-9,
+#box-popup-5,
+#box-popup-1 {
+    width: 20%;
+    background-color: #fddcb9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px transparent; 
+    
+}
+
+#box-popup-9:hover,
+#box-popup-5:hover,
+#box-popup-1:hover {
+    cursor: pointer;
+    border: solid 2px #ffbf7a;
+}
+
+#box-popup-10,
+#box-popup-6,
+#box-popup-2 {
+    width: 20%;
+    background-color: #fccbc8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px transparent; 
+    
+}
+
+#box-popup-10:hover,
+#box-popup-6:hover,
+#box-popup-2:hover {
+    cursor: pointer;
+    border: solid 2px #ff7a7a;
+}
+
+#box-popup-7,
+#box-popup-3 {
+    width: 20%;
+    background-color: #bbe4f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px transparent; 
+}
+
+#box-popup-7:hover,
+#box-popup-3:hover {
+    cursor: pointer;
+    border: solid 2px #7abfff;
+}
+
+
+#box-popup-8,
+#box-popup-4 {
+    width: 20%;
+    background-color: #cbe5cc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px transparent; 
+}
+#box-popup-8:hover,
+#box-popup-4:hover {
+    cursor: pointer;
+    border: solid 2px #4aa14a;
+}
+
+.box-popup div {
+    display: none;
+}
+
+.box-popup h3 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------ */
+/* Ici le footer */
+
+ul {
+    list-style: none;
+}
+
+.img-qualiopi {
+    width: 400px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.grid-debut-footer {
+    display: grid;
+    grid-template-columns: 15rem 1fr 15rem;
+    grid-template-rows: 1fr;
+    background-color: #F9FBFF;
+    padding: 0.7rem 0;
+}
+
+.img-MCF {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    width: 75px;
+
+}
+
+.img-display {
+    display: flex;
+    justify-content: flex-start;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    gap: 15px;
+}
+
+.sm-width {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.img-display-sm {
+    display: flex;
+    justify-content: flex-end;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    gap: 20px;
+    align-items: center;
+}
+
+.barre {
+    height: 1px;
+    background-color: black;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 15rem 1fr 1fr 1fr 1fr 1fr 15rem;
+    grid-template-rows: 1fr;
+    background-color: #F9FBFF;
+    padding-top: 3rem;
+}
+
+.title-un {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+.title-deux {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.title-trois {
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+.title-quatre {
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+.title-cinq {
+    grid-column-start: 6;
+    grid-row-start: 1;
+}
+.grid-footer div:nth-of-type(1){
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+.grid-footer div:nth-of-type(2){
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+.grid-footer div:nth-of-type(3){
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+.grid-footer div:nth-of-type(4){
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+.grid-footer div:nth-of-type(5){
+    grid-column-start: 6;
+    grid-row-start: 1;
+}
+.align-ul{
+    padding:0;
+}
+.li-footer{
+    padding-bottom: 7%;
+}
+.grid-footer-bis{
+    display: grid;
+    grid-template-columns: 15rem 1fr 15rem;
+    grid-template-rows: 1fr;
+    background-color: #F9FBFF;
+    padding-top: 3rem;
+}
+.p-footer-end{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    display: flex;
+    justify-content: flex-start
+}
+.p-footer-end-bis{
+    display: flex;
+    justify-content: flex-end;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+.text-footer-end-right{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    gap: 10px;
+}
+.link-footer-end{
+    text-decoration-line: underline;
+    color: black;
+}
+.exception{
+    text-decoration: none;
+}
+.ahref-footer{
+    text-decoration: none;
+    color: black;
+}
+.ahref-footer:hover{
+    text-decoration: underline;
+    color: black;
+}

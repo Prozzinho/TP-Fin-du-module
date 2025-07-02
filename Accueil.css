@@ -62,6 +62,10 @@ main {
     align-self: center;
 }
 
+#container-header-link>ul>li>a:hover{
+color:#7A7C7D;
+}
+
 /* ---------------------------------------------------- */
 
 .bg-img{
