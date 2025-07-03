@@ -3,6 +3,7 @@ const boxToDisplay = document.querySelector('#box-template-popup');
 var nombreBox = boxPopups.length;
 const body = document.querySelector('body');
 const closePopupButton = document.querySelector('#close-popup');
+const maPage = document.querySelector('html');
 
 
 boxPopups.forEach(box => {
@@ -30,6 +31,9 @@ boxPopups.forEach(box => {
             setTimeout(() => {
                 boxToDisplay.classList.add('open'); // Ajoute la classe pour l'animation
             }, 10);
+        });
+    });
+
 
             closePopupButton.addEventListener('click', () => {
                 boxToDisplay.style.display = 'none'; // Masque le template
@@ -37,8 +41,29 @@ boxPopups.forEach(box => {
                 document.querySelector('main').classList.remove('blur'); // Retire le flou du contenu principal
                 setTimeout(() => {
                     boxToDisplay.style.display = 'none'; // Assure que la box est complètement masquée
-                }, 300); // Correspond à la durée de la transition
+                    }, 300); // Correspond à la durée de la transition
             });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key == 'Escape') {
+                    boxToDisplay.style.display = 'none'; // Masque le template
+                    boxToDisplay.classList.remove('open'); // Enlève la classe pour l'animation
+                    document.querySelector('main').classList.remove('blur'); // Retire le flou du contenu principal
+                    setTimeout(() => {
+                        boxToDisplay.style.display = 'none'; // Assure que la box est complètement masquée
+                    }, 300); // Correspond à la durée de la transition
+                }
+            });
+
+            document.addEventListener('click', (event) => {
+                if (boxToDisplay.style.display === 'block' && !boxToDisplay.contains(event.target) && !event.target.closest('.box-popup')) { 
+                    boxToDisplay.style.display = 'none'; // Masque le template
+                    boxToDisplay.classList.remove('open'); // Enlève la classe pour l'animation
+                    document.querySelector('main').classList.remove('blur'); // Retire le flou du contenu principal
+                    setTimeout(() => {
+                        boxToDisplay.style.display = 'none'; // Assure que la box est complètement masquée
+                    }, 300); // Correspond à la durée de la transition
+            }});
             
-        });
-    });
+
+
