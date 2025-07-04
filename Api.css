@@ -1,0 +1,368 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.blur {
+    filter: blur(5px);
+    transition: filter 0.3s;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/* Ici on modifie le header (la nav barre avec les liens, le logo et le bouton */
+#container-header {
+    display: flex;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    /* L'ombre passera par-dessus le main */
+}
+
+#container-logo-adrar {
+    height: 100%;
+    width: 20%;
+}
+
+#logo-adrar-img {
+    left: 2rem;
+    top: 5px;
+    position: absolute;
+    width: 65px;
+    height: 85px;
+}
+
+#container-header-link {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#container-header-link ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+
+}
+
+#container-header-link ul li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#container-bouton-contact {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#container-bouton-contact {
+    flex: 0 0 auto;
+    /* Ne grandit pas, ne rétrécit pas */
+    margin-left: auto;
+    /* Pousse le bouton vers la droite */
+}
+
+#bouton-contact {
+    background-color: #171A22;
+    color: white;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+#bouton-contact:hover {
+    background-color: #45474E;
+    color: white;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+#container-header-link>ul>li>a:hover {
+    color: #7A7C7D;
+}
+
+/* ---------------------------------------------------- */
+
+/* Ici on modifie le main */
+
+main {
+    width: 100%;
+}
+
+/* Alignement des titre principaux de la page */
+h1,
+h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Alignement du titre dans la balise aside */
+h3 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* On vien centrer la video */
+.video-présentation {
+    text-align: center;
+}
+
+/* On enleve les puces */
+ul {
+    list-style: none;
+}
+
+/* On regle la taille de police et la position des éléments list */
+li {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+/* Séparation section et le contenue */
+.bloc1 {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+
+
+/* On ajuste l'emplacement du raccourci cliquable */
+.side-bar,
+.container-nav-links {
+    margin-left: 30px;
+    width: 20%;
+    position: sticky;
+    top: 90px;
+    max-height: calc(100vh - 90px);
+    /* Hauteur maximale pour éviter le débordement */
+    overflow-y: auto;
+    /* Scroll si le contenu est trop long */
+    flex-shrink: 0;
+    /* Empêche le sidebar de se rétrécir */
+
+
+}
+
+.Le-fonctionnement {
+    padding: 0 10%;
+}
+
+/* Taille de police pour le titre "Le Fonctionnement */
+#titre1 {
+    font-size: 50px;
+}
+
+/* Taille de police des texte sur le fonctionnement */
+.exp-fonctionnement,
+#fonctionnement2,
+#fonctionnement3,
+#fonctionnement4,
+#fonctionnement5 {
+    font-size: 30px;
+    margin-bottom: 5%;
+}
+
+/* Disposition de l'image par rapport au texte */
+#image-graph {
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+#stylelist {
+    list-style-type: disc;
+}
+
+
+/* Ici le footer */
+
+ul {
+    list-style: none;
+}
+
+.img-qualiopi {
+    width: 400px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.grid-debut-footer {
+    display: grid;
+    grid-template-columns: 15rem 1fr 15rem;
+    grid-template-rows: 1fr;
+    background-color: #F9FBFF;
+    padding: 0.7rem 0;
+}
+
+.img-MCF {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    width: 75px;
+
+}
+
+.img-display {
+    display: flex;
+    justify-content: flex-start;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    gap: 15px;
+}
+
+.sm-width {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.img-display-sm {
+    display: flex;
+    justify-content: flex-end;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    gap: 20px;
+    align-items: center;
+}
+
+.barre {
+    height: 1px;
+    background-color: black;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 15rem 1fr 1fr 1fr 1fr 1fr 15rem;
+    grid-template-rows: 1fr;
+    background-color: #F9FBFF;
+    padding-top: 3rem;
+}
+
+.title-un {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.title-deux {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.title-trois {
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+.title-quatre {
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+.title-cinq {
+    grid-column-start: 6;
+    grid-row-start: 1;
+}
+
+.grid-footer div:nth-of-type(1) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.grid-footer div:nth-of-type(2) {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.grid-footer div:nth-of-type(3) {
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+.grid-footer div:nth-of-type(4) {
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+.grid-footer div:nth-of-type(5) {
+    grid-column-start: 6;
+    grid-row-start: 1;
+}
+
+.align-ul {
+    padding: 0;
+}
+
+.li-footer {
+    padding-bottom: 7%;
+}
+
+.grid-footer-bis {
+    display: grid;
+    grid-template-columns: 15rem 1fr 15rem;
+    grid-template-rows: 1fr;
+    background-color: #F9FBFF;
+    padding-top: 3rem;
+}
+
+.p-footer-end {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    display: flex;
+    justify-content: flex-start
+}
+
+.p-footer-end-bis {
+    display: flex;
+    justify-content: flex-end;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.text-footer-end-right {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    gap: 10px;
+}
+
+.link-footer-end {
+    text-decoration-line: underline;
+    color: black;
+}
+
+.exception {
+    text-decoration: none;
+}
+
+.ahref-footer {
+    text-decoration: none;
+    color: black;
+}
+
+.ahref-footer:hover {
+    text-decoration: underline;
+    color: black;
+}
